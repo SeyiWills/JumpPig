@@ -9,6 +9,10 @@
 import SpriteKit
 
 class GameScene: SKScene {
+
+    
+    
+    
     
     // Tap To Start node
     let tapToStartNode = SKSpriteNode(imageNamed: "TapToStart")
@@ -50,6 +54,11 @@ class GameScene: SKScene {
         // HUD
         hudNode = SKNode()
         addChild(hudNode)
+        
+        
+       /* // Add a star
+        let star = createCarrotAtPosition(CGPoint(x: 160, y: 220))
+        foregroundNode.addChild(star)*/
         
         // Add the player
         player = createPlayer()
@@ -117,6 +126,16 @@ class GameScene: SKScene {
         playerNode.physicsBody?.linearDamping = 0.0
         
         
+        // 1
+        playerNode.physicsBody?.usesPreciseCollisionDetection = true
+        // 2
+        playerNode.physicsBody?.categoryBitMask = CollisionCategoryBitmask.Player
+        // 3
+        playerNode.physicsBody?.collisionBitMask = 0
+        // 4
+        playerNode.physicsBody?.contactTestBitMask = CollisionCategoryBitmask.Star | CollisionCategoryBitmask.Platform
+        
+        
         
         
         
@@ -124,12 +143,54 @@ class GameScene: SKScene {
     }
     
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        
+        // 1
+        // If we're already playing, ignore touches
+        if player.physicsBody!.dynamic {
+            return
+        }
+        
+        // 2
+        // Remove the Tap to Start node
+        tapToStartNode.removeFromParent()
+        
+        // 3
+        // Start the player by putting them into the physics simulation
+        player.physicsBody?.dynamic = true
+        
+        // 4
+        player.physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: 20.0))
+    
+        
+    }
+    
+    
+   /* func createCarrotAtPosition(position: CGPoint) -> CarrotNode {
+        // 1
+        let node = CarrotNode()
+        let thePosition = CGPoint(x: position.x * scaleFactor, y: position.y)
+        node.position = thePosition
+        node.name = "Node_Carrot"
+        
+        // 2
+        var sprite: SKSpriteNode
+        sprite = SKSpriteNode(imageNamed: "Carrot")
+        node.addChild(sprite)
+        
+        // 3
+        node.physicsBody = SKPhysicsBody(circleOfRadius: sprite.size.width / 2)
+        
+        // 4
+        node.physicsBody?.dynamic = false
+        
+        return node
+    }*/
     
     
     
-    
-    
-    
+ 
     
     
 }

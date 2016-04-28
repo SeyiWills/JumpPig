@@ -15,6 +15,7 @@
 		3FEAFD2A1CD0F24900DCB121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEAFD281CD0F24900DCB121 /* LaunchScreen.storyboard */; };
 		3FEAFD321CD0F32200DCB121 /* Backgrounds in Resources */ = {isa = PBXBuildFile; fileRef = 3FEAFD311CD0F32200DCB121 /* Backgrounds */; settings = {ASSET_TAGS = (); }; };
 		3FEAFD341CD0F32C00DCB121 /* Assets.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 3FEAFD331CD0F32C00DCB121 /* Assets.atlas */; settings = {ASSET_TAGS = (); }; };
+		3FEAFD361CD250FB00DCB121 /* GameObjectNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEAFD351CD250FB00DCB121 /* GameObjectNode.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3FEAFD2B1CD0F24900DCB121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FEAFD311CD0F32200DCB121 /* Backgrounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Backgrounds; sourceTree = "<group>"; };
 		3FEAFD331CD0F32C00DCB121 /* Assets.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Assets.atlas; sourceTree = "<group>"; };
+		3FEAFD351CD250FB00DCB121 /* GameObjectNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameObjectNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				3FEAFD1B1CD0F24900DCB121 /* AppDelegate.swift */,
 				3FEAFD1F1CD0F24900DCB121 /* GameScene.swift */,
+				3FEAFD351CD250FB00DCB121 /* GameObjectNode.swift */,
 				3FEAFD211CD0F24900DCB121 /* GameViewController.swift */,
 				3FEAFD231CD0F24900DCB121 /* Main.storyboard */,
 				3FEAFD261CD0F24900DCB121 /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 			files = (
 				3FEAFD201CD0F24900DCB121 /* GameScene.swift in Sources */,
 				3FEAFD221CD0F24900DCB121 /* GameViewController.swift in Sources */,
+				3FEAFD361CD250FB00DCB121 /* GameObjectNode.swift in Sources */,
 				3FEAFD1C1CD0F24900DCB121 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
